@@ -1,0 +1,243 @@
+# WSMP-Woodcutting configuration
+# Points are an in-plugin currency earned from tasks and the Ancient Grove
+# Legendary Request — NOT real money, NOT shared with any other plugin.
+# Every number in this file is a placeholder ratio; rebalance to taste.
+
+settings:
+  block-cheesy-farms: true
+  skip-cost: 150.0
+  task-block-cost: 200.0
+  master-teleport-cost: 6600.0
+  master-teleport-cooldown-minutes: 30
+  guide-book-cooldown-hours: 24
+  npc-shop-radius: 5.0
+
+tiers:
+  1:
+    name: "Tier 1"
+    display: "&aTier 1"
+    difficulty: "Very Easy"
+    min-level: 1
+    base-coins: 10
+    premium: false
+    resources:
+      OAK_LOG: {type: WOODCUTTING, level: 1, min-amount: 20, max-amount: 40}
+      BIRCH_LOG: {type: WOODCUTTING, level: 1, min-amount: 20, max-amount: 35}
+      SPRUCE_LOG: {type: WOODCUTTING, level: 1, min-amount: 20, max-amount: 35}
+  2:
+    name: "Tier 2"
+    display: "&aTier 2"
+    difficulty: "Easy"
+    min-level: 10
+    base-coins: 20
+    premium: false
+    resources:
+      JUNGLE_LOG: {type: WOODCUTTING, level: 10, min-amount: 20, max-amount: 35}
+      ACACIA_LOG: {type: WOODCUTTING, level: 10, min-amount: 20, max-amount: 35}
+      DARK_OAK_LOG: {type: WOODCUTTING, level: 12, min-amount: 20, max-amount: 35}
+  3:
+    name: "Tier 3"
+    display: "&eTier 3"
+    difficulty: "Moderate"
+    min-level: 25
+    base-coins: 40
+    premium: true
+    resources:
+      MANGROVE_LOG: {type: WOODCUTTING, level: 25, min-amount: 15, max-amount: 30}
+      CHERRY_LOG: {type: WOODCUTTING, level: 27, min-amount: 15, max-amount: 30}
+  4:
+    name: "Tier 4"
+    display: "&6Tier 4"
+    difficulty: "Hard"
+    min-level: 40
+    base-coins: 70
+    premium: true
+    resources:
+      JUNGLE_WOOD: {type: WOODCUTTING, level: 42, min-amount: 15, max-amount: 30}
+      DARK_OAK_WOOD: {type: WOODCUTTING, level: 40, min-amount: 15, max-amount: 30}
+  5:
+    name: "Tier 5"
+    display: "&cTier 5"
+    difficulty: "Very Hard"
+    min-level: 55
+    base-coins: 120
+    premium: true
+    resources:
+      CRIMSON_HYPHAE: {type: WOODCUTTING, level: 55, min-amount: 15, max-amount: 25}
+      WARPED_HYPHAE: {type: WOODCUTTING, level: 58, min-amount: 15, max-amount: 25}
+  6:
+    name: "Tier 6"
+    display: "&5Tier 6"
+    difficulty: "Elite"
+    min-level: 70
+    base-coins: 200
+    premium: true
+    resources:
+      CRIMSON_STEM: {type: WOODCUTTING, level: 70, min-amount: 15, max-amount: 25}
+      WARPED_STEM: {type: WOODCUTTING, level: 72, min-amount: 15, max-amount: 25}
+  7:
+    name: "Tier 7"
+    display: "&6&lTier 7"
+    difficulty: "Legendary"
+    min-level: 85
+    base-coins: 600
+    premium: true
+    resources: {}
+    # Tier 7 doesn't use a normal task pool — see legendary-requests below.
+
+lucky-strike:
+  1: 0.01
+  2: 0.02
+  3: 0.03
+  4: 0.04
+  5: 0.05
+  6: 0.06
+  7: 0.08
+
+# Only one Legendary Request in this split — the Triad Trial (which spanned
+# mining/woodcutting/farming) doesn't make sense once the skills are separate
+# plugins, so it was retired rather than split. Ancient Grove reuses the
+# Crimson/Warped Stem material pair from the old Triad's woodcutting leg.
+legendary-requests:
+  ancient_grove:
+    display: "&b🪓 Ancient Grove"
+    material: CRIMSON_STEM
+    min-amount: 40
+    max-amount: 60
+    yield: 600
+    cooldown-hours: 12
+
+streak-bonus:
+  5: 0.15
+  10: 0.25
+  25: 0.40
+  50: 0.65
+  100: 0.90
+
+shop:
+  task_skip:
+    display: "&fTask Skip"
+    material: ARROW
+    cost: 150
+    limit: -1
+    premium: false
+    description: "Skip your current task"
+  strength_potion:
+    display: "&fStrength Potion"
+    material: POTION
+    cost: 30
+    limit: -1
+    premium: false
+    description: "Strength potion"
+  speed_potion:
+    display: "&fSpeed Potion"
+    material: POTION
+    cost: 30
+    limit: -1
+    premium: false
+    description: "Speed potion"
+  saturation_potion:
+    display: "&fSaturation Potion"
+    material: POTION
+    cost: 45
+    limit: -1
+    premium: false
+    description: "Saturation potion"
+  haste_ii_potion:
+    display: "&fHaste II Potion"
+    material: POTION
+    cost: 45
+    limit: -1
+    premium: false
+    description: "Haste II potion"
+  fire_resistance:
+    display: "&fFire Resistance"
+    material: POTION
+    cost: 60
+    limit: -1
+    premium: false
+    description: "Fire Resistance potion"
+  night_vision:
+    display: "&fNight Vision"
+    material: POTION
+    cost: 60
+    limit: -1
+    premium: false
+    description: "Night Vision potion"
+  fortune_iii:
+    display: "&fFortune III Book"
+    material: ENCHANTED_BOOK
+    cost: 450
+    limit: -1
+    premium: false
+    description: "Fortune III enchanted book"
+  unbreaking_iii:
+    display: "&fUnbreaking III Book"
+    material: ENCHANTED_BOOK
+    cost: 450
+    limit: -1
+    premium: false
+    description: "Unbreaking III enchanted book"
+  efficiency_v:
+    display: "&fEfficiency V Book"
+    material: ENCHANTED_BOOK
+    cost: 450
+    limit: -1
+    premium: false
+    description: "Efficiency V enchanted book"
+  silk_touch:
+    display: "&fSilk Touch Book"
+    material: ENCHANTED_BOOK
+    cost: 600
+    limit: -1
+    premium: false
+    description: "Silk Touch enchanted book"
+  mending:
+    display: "&fMending Book"
+    material: ENCHANTED_BOOK
+    cost: 1200
+    limit: -1
+    premium: false
+    description: "Mending enchanted book"
+  xp_boost:
+    display: "&bXP Boost"
+    material: EXPERIENCE_BOTTLE
+    cost: 2400
+    limit: -1
+    premium: true
+    description: "+10% Woodcutting XP for 1 hour"
+  point_boost:
+    display: "&bPoint Boost"
+    material: EMERALD
+    cost: 3600
+    limit: -1
+    premium: true
+    description: "+10% Woodcutting Points for 1 hour"
+  better_tasks:
+    display: "&6Better Tasks"
+    material: NETHER_STAR
+    cost: 4800
+    limit: -1
+    premium: true
+    description: "+5% chance of a higher-tier task"
+  master_axe:
+    display: "&dMaster Woodcutter Axe"
+    material: NETHERITE_AXE
+    cost: 6000
+    limit: -1
+    premium: true
+    description: "Enchanted Netherite Axe - the Tier 7 tool requirement"
+  master_teleport:
+    display: "&dTeleport to Master"
+    material: ENDER_PEARL
+    cost: 6600
+    limit: 1
+    premium: true
+    description: "Unlock Master Woodcutter teleport"
+  end_game_reward:
+    display: "&6&l???"
+    material: NETHER_STAR
+    cost: 20000
+    limit: -1
+    premium: true
+    description: "End-game reward"

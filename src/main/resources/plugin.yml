@@ -1,0 +1,40 @@
+name: WSMP-Woodcutting
+version: '1.0.0'
+main: com.warriorssmp.woodcutting.WoodcuttingPlugin
+api-version: '1.21'
+author: WarriorsSMP
+softdepend: [Vault, PlaceholderAPI]
+
+commands:
+  woodmenu:
+    description: Open the Woodcutting menu
+    aliases: [woodcutting]
+  woodtask:
+    description: View your active Woodcutting task
+  woodleaderboards:
+    description: View the Woodcutting leaderboard
+    aliases: [woodleaderboard]
+  woodbuffs:
+    description: View your active Woodcutting buffs
+  woodshop:
+    description: Open the Woodcutting shop
+  woodshopadmin:
+    description: Admin editor for the Woodcutting shop
+    permission: woodcutting.admin
+  woodmenuadmin:
+    description: Admin view of the Woodcutting menu / player data
+    permission: woodcutting.admin
+  woodeditor:
+    description: Admin editor for Woodcutting tasks and tiers
+    permission: woodcutting.admin
+  woodmaster:
+    description: Spawn or manage the Master Woodcutter NPC
+    permission: woodcutting.admin
+
+permissions:
+  woodcutting.admin:
+    description: Access to Woodcutting admin commands
+    default: op
+  premiumwoodcutting:
+    description: Access to Tier 3-7 Woodcutting content
+    default: false
